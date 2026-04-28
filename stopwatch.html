@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="heading">
+                <img class="icon" src="./icon.ico" alt="logo">
+                <h1>ALARM</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">Alarm</a>
+                    </li>
+                    <li>
+                        <a href="./stopwatch.html" style="border-bottom: 2px solid white;">Stopwatch</a>
+                    </li>
+                    <li>
+                        <a href="./timer.html">Timer</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="time"><span id="hours">00</span>:<span id="mins">00</span>:<span id="secs">00</span>:<span id="ms">00</span></h1>
+            <div class="sw-button">
+                <button type="button" value="start" class="sw-btn" id="sw-start">Start</button>
+                <button type="button" value="stop" class="sw-btn" id="sw-stop" disabled>Stop</button>
+            </div>
+        </main>
+    </div>
+    <script src="stopwatch.js"></script>
+</body>
+</html> 

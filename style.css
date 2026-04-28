@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body,
+html{
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+    width: 100vw;
+}
+header{
+    position: sticky;
+    z-index: 100;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(24, 23, 23);
+}
+.icon{
+    max-height: 6rem;
+}
+.heading{
+    display: flex;
+}
+.heading h1{
+    font-size: 5rem;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul li{
+    font-size: 2rem;
+    padding: 2rem 3rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    opacity: 0.6;
+}
+a:active{
+    border-bottom: 2px solid white;
+}
+main{
+    position: relative;
+}
+.plus-icon{
+    font-size: 3rem;
+    
+    display: block;
+    /* position: absolute; */
+    /* right: 0; */
+    text-align: right;
+    margin-right: 7rem;
+    
+    
+}
+.plus-icon i{
+    background: rgb(24, 23, 23);
+    padding: 2rem;
+    border-radius: 50%;
+    padding-right: 4.5rem;
+    margin:2rem;
+}
+#set-alarm-container{
+    background: rgb(24, 23, 23);
+    width: 50rem;
+    height: 50rem;
+    margin: 7rem auto;
+    padding: 3rem;
+    border-radius: 3rem;
+    display: none;
+    position: absolute;
+    left: 35%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+}
+#set-alarm-container h1{
+    font-size: 5rem;
+    text-align: center;
+    padding: 1rem;
+}
+#set-alarm-container form{
+    
+    margin-top: 4rem;
+}
+.inp label{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.inp input{
+    width: 10rem;
+    font-size: 4rem;
+    text-align: center;
+}
+.inp select{
+    width: 10rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+form h2{
+    font-size: 4rem;
+    margin-top: 6.5rem;
+}
+form>input{
+    background-color: inherit;
+    border: none;
+    border-bottom: 0.2rem solid white;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+    color: white
+}
+#alarm-name{
+    margin-top: 2rem;
+    outline: none;
+    width: 100%;
+}
+#date{
+    border: none;
+    width: 100%;
+    font-size: 2rem;
+}
+#date:focus{
+    outline: none;
+}
+#set-btn{
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+    font-size: 2.5rem;
+    background-color: #2776EA;
+    color: white;
+    border: none;
+    display: block;
+    margin: 2.5rem auto;
+    margin-top: 3rem;
+}
+.alarm-container{
+    display: flex;
+    flex-direction: column;
+}
+.alarm{
+    background-color: rgb(24, 23, 23);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    border-radius: 7rem;
+    margin-top: 1rem;
+    height: 124px;
+}
+.alarm-content{
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 5rem;
+}
+.alarm-content p{
+    font-size: 2rem;
+}
+.alarm-content h1{
+    font-size: 4rem;
+}
+.date-container{
+    display: flex;
+    height: 100%;
+    margin: auto 15rem auto auto;
+    gap: 4rem;
+}
+.date-container p{
+    font-size: 2rem;
+    margin-right: 1rem;   
+}
+.delete{
+    font-size: 2.5rem;
+}
+.toggle{
+    position: relative;
+    width: 7rem;
+    height: 3.5rem;
+}
+.toggle input{
+    position: absolute;
+    opacity: 0;
+}
+.slider{
+    position: absolute;
+    inset: 0;
+    border-radius: 5rem;
+    background-color: #ccc;
+    transition: 0.4s;   
+}
+.slider::before{
+    content: "";
+    position: absolute;
+    top:0.2rem;
+    left: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+input:checked + .slider{
+    background-color: #2776EA;
+}
+input:checked + .slider::before{
+    transform: translateX(3.5rem);
+
+}
+
+
+
+
+
+
+
+
+
+
+/* stopwatch */
+.time{
+    font-size: 12rem;
+    width: 100vw;
+    height: 50%;
+    text-align: center;
+    margin-top: 8%;
+}
+.sw-button{
+    display: flex;
+    justify-content: center;
+    margin: 13rem;
+}
+.sw-btn{
+    padding: 1rem 4rem;
+    border-radius: 40px;
+    font-size: 4.5rem;
+    background-color: #2776EA;
+    color: white;
+    border: none;
+}
+#sw-start{
+    margin-right: 5rem;
+}
+#sw-stop{
+    margin-left: 5rem;
+    
+}
+.sw-btn:disabled{
+    background-color: darkgray;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+/* timer */
+.tags{
+    display:flex;
+    margin:7rem;
+    font-size: 3rem;
+    justify-content: center;
+    color: gray;
+}
+.tags p{
+    padding: 0 11rem;
+}
+.counter{
+    display:flex;
+    margin:7rem;
+    font-size: 4rem;
+    justify-content: center;
+    color: gray;
+    
+}
+.counter .inp{
+    padding: 0 11rem;
+} 
+/* .counter ul li{
+    height: 6rem;
+    line-height: 4rem;
+    text-align: center;
+    scroll-snap-align:center;
+}
+.counter ul::-webkit-scrollbar{
+   display:none;
+}
+.counter p{
+    padding-top: 5.5rem;
+    color:white;
+} */ 

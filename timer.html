@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="heading">
+                <img class="icon" src="./icon.ico" alt="logo">
+                <h1>ALARM</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">Alarm</a>
+                    </li>
+                    <li>
+                        <a href="./stopwatch.html">Stopwatch</a>
+                    </li>
+                    <li>
+                        <a href="./timer.html" style="border-bottom: 2px solid white;">Timer</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="">
+                <div class="counter">
+                    <div class="inp">
+                        <label for="hours">Hours</label>
+                        <input type="number" id="inp-hours">
+                    </div>
+                    <h2>:</h2>
+                    <div class="inp">
+                        <label for="minutes">Minutes</label>
+                        <input type="number" id="inp-mins">
+                    </div>
+                    <h2>:</h2>
+                    <div class="inp">
+                        <label for="seconds">Seconds</label>
+                        <input type="number" id="inp-secs">
+                    </div>
+                </div>
+            </form>
+            <div class="sw-button">
+                <button type="button" value="start" class="sw-btn" id="sw-start">Start</button>
+                <button type="button" value="stop" class="sw-btn" id="sw-stop" disabled>Pause</button>
+            </div>
+        </main>
+    </div>
+    <script src="timer.js"></script>
+</body>
+</html>

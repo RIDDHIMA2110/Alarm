@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/ac2bcace36.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="heading">
+                <img class="icon" src="./icon.ico" alt="logo">
+                <h1>ALARM</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html" style="border-bottom: 2px solid white;">Alarm</a>
+                    </li>
+                    <li>
+                        <a href="./stopwatch.html">Stopwatch</a>
+                    </li>
+                    <li>
+                        <a href="./timer.html">Timer</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="line">
+                <h1 class="plus-icon" id="add"><i class="fa-solid fa-plus"></i></h1>
+            </div>
+            <div id="set-alarm-container">
+                <h1>Set Alarm</h1>
+                <form action="">
+                    <div class="main">
+                        <div class="inp">
+                            <label for="hours">Hours</label>
+                            <input type="number" id="inp-hours" value="12">
+                        </div>
+                        <h2>:</h2>
+                        <div class="inp">
+                            <label for="minutes">Minutes</label>
+                            <input type="number" id="inp-mins" value="00">
+                        </div>
+                        <div class="inp">
+                            <label for="" style="visibility:hidden">a</label>
+                            <select id="am-pm">
+                                <option value="am">am</option>
+                                <option value="pm">pm</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="date" id="date">
+                    <input type="text" name="Alarm-name" id="alarm-name" placeholder="Alarm name">
+                    <button type="button" id="set-btn">Set</button>
+                </form>
+            </div>
+            <div class="alarm-container" id="alarm-container">
+                
+            </div>
+            
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+ 
