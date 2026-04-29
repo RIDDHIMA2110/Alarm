@@ -3,7 +3,7 @@ let setAlarmContainer=document.getElementById("set-alarm-container");
 let setBtn=document.getElementById("set-btn");
 let now=new Date();
 let today=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
-
+// toogle off working
 const toggleOff=(checkbox)=>{
     checkbox.checked=false;
 }
